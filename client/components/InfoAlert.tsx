@@ -1,11 +1,5 @@
-import React, { ReactChild } from "react";
-import {
-  RegisteredStyle,
-  StyleSheet,
-  Text,
-  View,
-  ViewStyle,
-} from "react-native";
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
 
 export type Props = {
   text: string;

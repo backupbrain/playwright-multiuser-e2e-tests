@@ -40,14 +40,14 @@ Running:
 
 ```bash
 $ cd client
-$ expo run web
+$ npm run web
 ```
 
 Multiple browser session testing:
 
 ```bash
 $ cd client
-$ npx playwright test
+$ npm run test # --headed to display browsers
 
 Running 3 tests using 1 worker
 
@@ -57,4 +57,10 @@ Running 3 tests using 1 worker
 
 
   3 passed (8s)
+```
+
+To show the browsers:
+
+```bash
+$ npm run test:headed
 ```

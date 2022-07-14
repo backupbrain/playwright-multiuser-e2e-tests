@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, TextInput, StyleSheet } from "react-native";
+import { TextInput, Text, StyleSheet } from "react-native";
 
 export type Props = {
   label?: string;

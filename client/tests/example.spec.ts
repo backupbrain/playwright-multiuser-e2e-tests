@@ -1,4 +1,4 @@
-import { test, expect, chromium } from "@playwright/test";
+import { test, expect } from "@playwright/test";
 
 const waitFor = async (seconds: number): Promise<void> => {
   return new Promise((resolve) => {
@@ -43,7 +43,7 @@ test.describe("Browser tests", () => {
     await waitFor(1);
 
     // wait for ui updates to settle
-    await waitFor(2);
+    await waitFor(5);
 
     const page1user1 = await page1.innerHTML(
       "//div[1]/div/div/div/div/div/div[1]/div[2]/div[2]/div[2]/div/div/div/div[1]/div/div[4]/div/div[1]/div/div"
@@ -64,5 +64,3 @@ test.describe("Browser tests", () => {
     expect(page2user2).toContain("user2");
   });
 });
-
-// //div[1]/div/div/div/div/div/div[1]/div[2]/div[2]/div[2]/div/div/div/div[1]/div/div[4]
