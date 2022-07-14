@@ -23,8 +23,8 @@ There are two hard-coded users:
 
 | Username | Password | 
 | ---------|----------|
-| user1    | password |
-| user2    | password |
+| user1    | pass     |
+| user2    | pass     |
 
 
 ## Client

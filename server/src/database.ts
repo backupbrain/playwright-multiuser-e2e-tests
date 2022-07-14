@@ -4,8 +4,8 @@ export type User = {
   password: string;
 };
 export const users: User[] = [
-  { id: "0", username: "user1", password: "password" },
-  { id: "1", username: "user2", password: "password" },
+  { id: "0", username: "user1", password: "pass" },
+  { id: "1", username: "user2", password: "pass" },
 ];
 
 export const logins: { [key: string]: string } = {
