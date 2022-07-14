@@ -47,7 +47,7 @@ Multiple browser session testing:
 
 ```bash
 $ cd client
-$ npm run test # --headed to display browsers
+$ npm run test
 
 Running 3 tests using 1 worker
 
