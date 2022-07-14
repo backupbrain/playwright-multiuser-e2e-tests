@@ -8,9 +8,7 @@ export const users: User[] = [
   { id: "1", username: "user2", password: "pass" },
 ];
 
-export const logins: { [key: string]: string } = {
-  "user1@example.com": "abc123",
-};
+export const logins: { [key: string]: string } = {};
 
 export interface Database {
   users: User[];
