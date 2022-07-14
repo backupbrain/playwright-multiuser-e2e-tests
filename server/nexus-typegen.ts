@@ -36,7 +36,7 @@ export interface NexusGenObjects {
     usernames: Array<string | null>; // [String]!
   }
   LoginResult: { // root type
-    authToken?: boolean | null; // Boolean
+    authToken?: string | null; // String
   }
   LogoutResult: { // root type
     success: boolean; // Boolean!
@@ -60,13 +60,14 @@ export interface NexusGenFieldTypes {
     usernames: Array<string | null>; // [String]!
   }
   LoginResult: { // field return type
-    authToken: boolean | null; // Boolean
+    authToken: string | null; // String
   }
   LogoutResult: { // field return type
     success: boolean; // Boolean!
   }
   Mutation: { // field return type
-    login: NexusGenRootTypes['LogoutResult'] | null; // LogoutResult
+    login: NexusGenRootTypes['LoginResult'] | null; // LoginResult
+    logout: NexusGenRootTypes['LogoutResult'] | null; // LogoutResult
   }
   Query: { // field return type
     loggedInUsers: NexusGenRootTypes['LoggedInUsersResult'] | null; // LoggedInUsersResult
@@ -78,13 +79,14 @@ export interface NexusGenFieldTypeNames {
     usernames: 'String'
   }
   LoginResult: { // field return type name
-    authToken: 'Boolean'
+    authToken: 'String'
   }
   LogoutResult: { // field return type name
     success: 'Boolean'
   }
   Mutation: { // field return type name
-    login: 'LogoutResult'
+    login: 'LoginResult'
+    logout: 'LogoutResult'
   }
   Query: { // field return type name
     loggedInUsers: 'LoggedInUsersResult'
@@ -92,6 +94,11 @@ export interface NexusGenFieldTypeNames {
 }
 
 export interface NexusGenArgTypes {
+  Mutation: {
+    login: { // args
+      input?: NexusGenInputs['LoginInput'] | null; // LoginInput
+    }
+  }
 }
 
 export interface NexusGenAbstractTypeMembers {

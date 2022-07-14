@@ -8,6 +8,7 @@ export const server = new ApolloServer({
   schema,
   context: async (request) => {
     const context: Context = { user: null };
+    console.log({ headers: request.req.headers });
     if (request.req.headers.authorization) {
       const user = await getUserFromAuthHeader({
         authorizationHeader: request.req.headers.authorization,

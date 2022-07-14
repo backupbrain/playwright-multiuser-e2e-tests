@@ -9,12 +9,13 @@ export const LogoutResult = objectType({
   },
 });
 
-export const loginMutation = mutationField("login", {
+export const logoutMutation = mutationField("logout", {
   type: LogoutResult,
   async resolve(root, args, context: Context) {
     if (!context.user) {
       throw new Error("Unauthorized");
     }
     delete database.logins[context.user.username];
+    return { success: true };
   },
 });

@@ -12,7 +12,7 @@ input LoginInput {
 }
 
 type LoginResult {
-  authToken: Boolean
+  authToken: String
 }
 
 type LogoutResult {
@@ -20,7 +20,8 @@ type LogoutResult {
 }
 
 type Mutation {
-  login: LogoutResult
+  login(input: LoginInput): LoginResult
+  logout: LogoutResult
 }
 
 type Query {

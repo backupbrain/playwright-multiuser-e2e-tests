@@ -15,6 +15,8 @@ export const loggedInUsers = queryField((t) => {
     type: LoggedInUsersResult,
     args: null,
     async resolve(root, args, context: Context) {
+      console.log("HOHOHOHO");
+      console.log({ context });
       if (!context.user) {
         throw new Error("Unauthorized");
       }
